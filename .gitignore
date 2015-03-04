@@ -1,0 +1,4 @@
+ndll/*/*.so
+ndll/*/*.a
+ndll/*/*.ndll
+project/obj
