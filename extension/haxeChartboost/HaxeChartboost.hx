@@ -27,8 +27,13 @@ import openfl.utils.JNI;
 			ShowAdFunc = JNI.createStaticMethod("org/haxe/extension/cb/ChartboostConnect", "ShowAd", "()V");
 		}
 		
+		#if openfl_legacy
 		Lib.postUICallback(function(){
 		ShowAdFunc(); } );
+		#else
+		JNI.postUICallback(function(){
+		ShowAdFunc(); } );
+		#end
 		#end
 		
 		#if ios
